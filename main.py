@@ -4,7 +4,7 @@ import indicoio
 import apikey
 # api-key contains: indicoio.config.api_key = '[key]'
 
-m = csv.writer(open('test.csv','wb+'))
+m = csv.writer(open('test.csv','wb+'),quoting=csv.QUOTE_NONE, quotechar='',escapechar='\\')
 
 with open('testdata.csv') as f:
 	me = csv.reader(f)
@@ -16,12 +16,6 @@ with open('testdata.csv') as f:
 
 		# write mydata as a line into CSV file
 		m.writerow(mydata())
-		# m.writerow([i, "joy":Emotions["joy"],
-		# 	"anger":Emotions["anger"],
-		# 	"fear":Emotions["fear"],
-		# 	"sadness":Emotions["sadness"],
-		# 	"surprise":Emotions["surprise"]
-		# )
 
 		print(mydata())
 		print("\r\n")
@@ -29,5 +23,3 @@ with open('testdata.csv') as f:
 		print("done")
 		# python obj to csv using X tool
 		# write into a new CSV
-
-# ["8cd9ccbc2a7f864edff7306faae88064","sentiment sentencesentiment sentencesentiment sentencesentiment sentence",{"Sentiment":{"joy":.0.1}}],

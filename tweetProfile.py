@@ -7,7 +7,16 @@ class processedTweet(object):
 			"sadness":Emotions["sadness"],
 			"surprise":Emotions["surprise"]
 		}
+		self.emotionFields = [
+			Tweet,
+			Emotions["joy"],
+			Emotions["anger"],
+			Emotions["fear"],
+			Emotions["sadness"],
+			Emotions["surprise"]
+		]
 		self.tweetData = Tweet
 	#	self.time = Timestamp
 	def __call__(self):
-		return [self.tweetData,self.emotions]
+		preparedString = self.emotionFields
+		return preparedString
