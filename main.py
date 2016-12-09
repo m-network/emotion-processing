@@ -2,13 +2,14 @@ import csv
 from tweetProfile import processedTweet
 import indicoio
 import apikey
-# api-key contains: indicoio.config.api_key = '[key]'
+# api-key contains: import indicoio /n indicoio.config.api_key = '[key]'
 
-m = csv.writer(open('test.csv','wb+'),quoting=csv.QUOTE_NONE, quotechar='',escapechar='\\')
+m = csv.writer(open('test2.csv','wb+'),quoting=csv.QUOTE_NONE, quotechar='',escapechar='\\')
 
-with open('testdata.csv') as f:
+with open('xaa.csv') as f:
 	me = csv.reader(f)
 	for i in me:
+		
 		emotionArray = indicoio.emotion(i)
 		# print(i[0])
 		# print(emotionArray[0])
